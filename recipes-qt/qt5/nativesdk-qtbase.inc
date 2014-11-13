@@ -229,7 +229,7 @@ do_install() {
            ${D}/${OE_QMAKE_PATH_PLUGINS} \
            ${D}${libdir}/cmake \
            ${D}${libdir}/pkgconfig
-    find ${D}${libdir} -maxdepth 1 -name 'lib*' -and \
+    find ${D}${libdir} -maxdepth 1 -name 'lib*' -and -not -type d \
                                    -not -name 'libQt5Core.so*' -and \
                                    ${QTLIBSPRESERVE} \
                                    -not -name 'libQt5Bootstrap.a' \
